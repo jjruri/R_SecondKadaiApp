@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        //segueから遷移先のResultViewControllerを取得する
+        let resultviewcontroller:ResultViewController = segue.destination as! ResultViewController
+        //遷移先のResultViewControllerで宣言している変数に値を渡す
+        resultviewcontroller.name = username
+        
+    }
+    
     @IBAction func button(_ sender: Any) {
     }
     override func viewDidLoad() {
@@ -17,8 +26,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var username: UITextField!
+    
     @IBAction func pageback(_ segue: UIStoryboardSegue){
     }
-
+    
 }
 
