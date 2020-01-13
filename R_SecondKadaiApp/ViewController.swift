@@ -9,16 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
+    @IBOutlet weak var username: UITextField!
     @IBAction func button(_ sender: Any) {
     }
 
-    @IBOutlet weak var username: UITextField!
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        username.clearButtonMode = .always
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
