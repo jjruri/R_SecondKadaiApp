@@ -19,6 +19,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        label.text = "こんにちは\(name)さん"
     }
     
 
