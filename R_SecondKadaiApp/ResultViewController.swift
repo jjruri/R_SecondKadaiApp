@@ -13,7 +13,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     //遷移元のページから変数を受け取るためにプロパティ（変数）を宣言しておく
-    var name:String = ""
+    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

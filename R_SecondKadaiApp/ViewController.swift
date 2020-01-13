@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var username: UITextField!
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
         //segueから遷移先のResultViewControllerを取得する
         let resultviewcontroller:ResultViewController = segue.destination as! ResultViewController
         //遷移先のResultViewControllerで宣言している変数に値を渡す
-        resultviewcontroller.name = username
+        resultviewcontroller.name = username.text ?? ""
     }
 
     @IBAction func pageback(_ segue: UIStoryboardSegue){
